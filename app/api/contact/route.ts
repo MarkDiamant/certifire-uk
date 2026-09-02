@@ -19,8 +19,8 @@ export async function POST(request: Request) {
     }
 
     const resend = new Resend(key);
-    const destination = process.env.CONTACT_TO_EMAIL || 'certifireukltd@gmail.com';
-    const from = process.env.CONTACT_FROM_EMAIL || 'Certifire UK <onboarding@resend.dev>';
+    const destination = 'certifireukltd@gmail.com';
+    const from = 'Certifire UK <website@certifireuk.co.uk>';
 
     const safe = (value: unknown) => String(value ?? '')
       .replace(/&/g, '&amp;')
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       html: `
         <div style="font-family:Arial,sans-serif;max-width:640px;margin:auto;color:#1d1d1d">
           <h2 style="margin-bottom:4px">New Certifire UK website enquiry</h2>
-          <p style="color:#666;margin-top:0">Submitted via the Certifire UK website.</p>
+          <p style="color:#666;margin-top:0">Submitted via certifireuk.co.uk.</p>
           <table style="width:100%;border-collapse:collapse;margin-top:24px">
             <tr><td style="padding:10px;border-bottom:1px solid #eee"><strong>Name</strong></td><td style="padding:10px;border-bottom:1px solid #eee">${safe(name)}</td></tr>
             <tr><td style="padding:10px;border-bottom:1px solid #eee"><strong>Phone</strong></td><td style="padding:10px;border-bottom:1px solid #eee">${safe(phone)}</td></tr>
