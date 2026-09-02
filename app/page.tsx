@@ -8,8 +8,8 @@ const LOGO = 'https://fueqkodtkzpkgyljuiui.supabase.co/storage/v1/object/public/
 const DS_LOGO = '/diamant-solutions-logo.svg';
 
 const PAYMENT_LINKS = {
-  fra: 'https://book.stripe.com/14AbJ18fE5g1gG383a1RC00',
-  alarm: 'https://book.stripe.com/6oUbJ13ZofUF3Th5V21RC01',
+  fra: 'https://book.stripe.com/7sYfZhanM37TahF2IQ1RC05',
+  alarm: 'https://book.stripe.com/dRm4gzbrQ9wh3Th97e1RC06',
   emergency: 'https://book.stripe.com/8x27sL53s6k5gG31EM1RC02',
   weekly: 'https://buy.stripe.com/bJe28r7bAbEp4Xl1EM1RC03',
   monthly: 'https://buy.stripe.com/dRmeVd8fE0ZLfBZgzG1RC04',
@@ -111,7 +111,7 @@ export default function Home(){
           {service.logging ? <div className="logging-actions"><a className="service-action" href={PAYMENT_LINKS.weekly}>Book weekly <ChevronRight size={17}/></a><a className="service-action secondary-action" href={PAYMENT_LINKS.monthly}>Book monthly <ChevronRight size={17}/></a></div> : <a className="service-action" href={service.bookingUrl}>Book & pay securely <ChevronRight size={17}/></a>}
         </motion.article>;
       })}</div>
-      <div className="booking-note"><strong>Fire Risk Assessment & Fire Alarm bookings:</strong> prices include up to 3 storeys. For properties with more than 3 storeys, Stripe will show an <em>Additional Storey</em> option at £10 per extra storey. Enter the total number of storeys and add the correct number above 3 before paying.</div>
+      <div className="booking-note"><strong>Fire Risk Assessment & Fire Alarm bookings:</strong> the standard price covers 3 storeys. In Stripe, set <em>Property storeys</em> to the property's total number of storeys. The checkout total updates automatically at £10 for each storey above 3.</div>
     </section>
 
     <section className="process-wrap" id="process"><div className="process-glow"/><div className="section process-inner">
@@ -119,7 +119,7 @@ export default function Home(){
       <div className="steps">{[
         ['01','Choose your service','Select the inspection, certificate or logging service you require.'],
         ['02','Complete the property details','Stripe will collect your contact details, property address and required access instructions.'],
-        ['03','Pay securely online','Complete payment through Certifire UK’s secure Stripe checkout.'],
+        ['03','Pay securely online','Complete payment through Certifire UK’s secure Stripe checkout. For Fire Risk Assessments and Fire Alarm Certificates, set the property storey quantity and Stripe updates the total automatically.'],
         ['04','Certifire attends','Your booking will be attended within the next 7 working days and the relevant documentation follows.']
       ].map(([n,title,copy])=><motion.div key={n} initial={reduceMotion?false:{opacity:0,x:20}} whileInView={{opacity:1,x:0}} viewport={{once:true}} className="step"><strong>{n}</strong><div><h3>{title}</h3><p>{copy}</p></div></motion.div>)}</div>
     </div></section>
