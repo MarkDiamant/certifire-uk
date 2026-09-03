@@ -10,7 +10,7 @@ const DS_LOGO = '/diamant-solutions-logo.svg';
 const PAYMENT_LINKS = {
   fra: 'https://book.stripe.com/7sYfZhanM37TahF2IQ1RC05',
   alarm: 'https://book.stripe.com/dRm4gzbrQ9wh3Th97e1RC06',
-  emergency: 'https://book.stripe.com/8x27sL53s6k5g31EM1RC02',
+  emergency: 'https://book.stripe.com/8x27sL53s6k5gG31EM1RC02',
   weekly: 'https://buy.stripe.com/bJe28r7bAbEp4Xl1EM1RC03',
   monthly: 'https://buy.stripe.com/dRmeVd8fE0ZLfBZgzG1RC04',
 };
